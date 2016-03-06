@@ -12,6 +12,9 @@
 		8BB3AEAB1C8B64C6002A793C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB3AEA91C8B64C6002A793C /* Main.storyboard */; };
 		8BB3AEAD1C8B64C6002A793C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BB3AEAC1C8B64C6002A793C /* Assets.xcassets */; };
 		8BB3AEB01C8B64C6002A793C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB3AEAE1C8B64C6002A793C /* LaunchScreen.storyboard */; };
+		8BBAB5621C8BBD41006F756D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBAB5611C8BBD41006F756D /* LoginViewController.swift */; };
+		8BBAB5641C8BBDB9006F756D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBAB5631C8BBDB9006F756D /* Default-568h@2x.png */; };
+		8BBAB5661C8BC7F7006F756D /* SuccessLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBAB5651C8BC7F7006F756D /* SuccessLogViewController.swift */; };
 		B21E53AE3D2387B337188D27 /* Pods_InstagramParse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F690D970570081A7DB12267 /* Pods_InstagramParse.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +26,9 @@
 		8BB3AEAC1C8B64C6002A793C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BB3AEAF1C8B64C6002A793C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BB3AEB11C8B64C6002A793C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BBAB5611C8BBD41006F756D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8BBAB5631C8BBDB9006F756D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8BBAB5651C8BC7F7006F756D /* SuccessLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessLogViewController.swift; sourceTree = "<group>"; };
 		9DEDB1FEC48BC80CED0A0544 /* Pods-InstagramParse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramParse.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramParse/Pods-InstagramParse.release.xcconfig"; sourceTree = "<group>"; };
 		9F690D970570081A7DB12267 /* Pods_InstagramParse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramParse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB76BBB301B312BA67A2B772 /* Pods-InstagramParse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramParse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramParse/Pods-InstagramParse.debug.xcconfig"; sourceTree = "<group>"; };
@@ -60,6 +66,7 @@
 		8BB3AE991C8B64C6002A793C = {
 			isa = PBXGroup;
 			children = (
+				8BBAB5631C8BBDB9006F756D /* Default-568h@2x.png */,
 				8BB3AEA41C8B64C6002A793C /* InstagramParse */,
 				8BB3AEA31C8B64C6002A793C /* Products */,
 				53100525F1369AEA9E35B8B5 /* Pods */,
@@ -81,6 +88,8 @@
 				8BB3AEA51C8B64C6002A793C /* AppDelegate.swift */,
 				8BB3AEA71C8B64C6002A793C /* ViewController.swift */,
 				8BB3AEA91C8B64C6002A793C /* Main.storyboard */,
+				8BBAB5651C8BC7F7006F756D /* SuccessLogViewController.swift */,
+				8BBAB5611C8BBD41006F756D /* LoginViewController.swift */,
 				8BB3AEAC1C8B64C6002A793C /* Assets.xcassets */,
 				8BB3AEAE1C8B64C6002A793C /* LaunchScreen.storyboard */,
 				8BB3AEB11C8B64C6002A793C /* Info.plist */,
@@ -150,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BB3AEB01C8B64C6002A793C /* LaunchScreen.storyboard in Resources */,
+				8BBAB5641C8BBDB9006F756D /* Default-568h@2x.png in Resources */,
 				8BB3AEAD1C8B64C6002A793C /* Assets.xcassets in Resources */,
 				8BB3AEAB1C8B64C6002A793C /* Main.storyboard in Resources */,
 			);
@@ -210,8 +220,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BBAB5621C8BBD41006F756D /* LoginViewController.swift in Sources */,
 				8BB3AEA81C8B64C6002A793C /* ViewController.swift in Sources */,
 				8BB3AEA61C8B64C6002A793C /* AppDelegate.swift in Sources */,
+				8BBAB5661C8BC7F7006F756D /* SuccessLogViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

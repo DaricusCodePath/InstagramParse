@@ -13,10 +13,29 @@ import Parse
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var window2: UIWindow?
+    var storyboard = UIStoryboard(name: "Main", bundle: nil)
+    
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        
         // Override point for customization after application launch.
+        
+        Parse.initializeWithConfiguration(
+            ParseClientConfiguration(block: { (configuration:ParseMutableClientConfiguration) -> Void in
+                configuration.applicationId = "DaricusInstagram"
+                configuration.clientKey = "f6tgy7juifd56rhy8sewuyghjoi"
+                configuration.server = "https://daricusparse.herokuapp.com/parse"
+            })
+        )
+        
+        if PFUser.currentUser() != nil {
+            print("Current user: \(PFUser.currentUser()!.username)")
+            let viewController = storyboard.instantiateViewControllerWithIdentifier("Passed") 
+            window?.rootViewController = viewController
+        }
         return true
     }
 
