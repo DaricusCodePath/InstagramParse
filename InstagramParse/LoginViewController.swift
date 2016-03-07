@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
             error: NSError?) -> Void in
             if user != nil {
                 print("You're logged in!")
-        self.performSegueWithIdentifier("loginSegue", sender: nil)
+        self.performSegueWithIdentifier("Passed", sender: nil)
 
             }
         }
@@ -44,7 +44,7 @@ class LoginViewController: UIViewController {
         newUser.signUpInBackgroundWithBlock { (success: Bool, error:NSError?) -> Void in
             if success {
                 print("Created a user!")
-        self.performSegueWithIdentifier("loginSegue", sender: nil)
+        self.performSegueWithIdentifier("Passed", sender: nil)
             }else{
                 print(error?.localizedDescription)
                 if error?.code == 202 {

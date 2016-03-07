@@ -1,14 +1,15 @@
 //
-//  SuccessLogViewController.swift
+//  AccountViewController.swift
 //  InstagramParse
 //
-//  Created by DrDunkan on 3/5/16.
+//  Created by DrDunkan on 3/6/16.
 //  Copyright © 2016 Daricus Duncan. All rights reserved.
 //
 
 import UIKit
+import Parse
 
-class SuccessLogViewController: UIViewController {
+class AccountViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,11 @@ class SuccessLogViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func onLogout(sender: AnyObject) {
+        PFUser.logOut()
+        self.performSegueWithIdentifier("accountToLoginSegue", sender: nil)
+        
+    }
 
     /*
     // MARK: - Navigation

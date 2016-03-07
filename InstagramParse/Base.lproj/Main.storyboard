@@ -8,7 +8,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="InstagramParse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="InstagramParse" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -44,35 +44,178 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="tdK-uA-K9T"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="passwordField" destination="3rr-kO-WEV" id="6GT-x1-rpv"/>
                         <outlet property="usernameField" destination="9tz-T5-5jC" id="Bho-Dn-gmq"/>
-                        <segue destination="LVF-QB-np4" kind="presentation" identifier="loginSegue" id="PRJ-Up-G1v"/>
+                        <segue destination="mrH-r2-wbY" kind="presentation" identifier="Passed" id="k4a-sZ-Ul3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="40.5" y="770.5"/>
+            <point key="canvasLocation" x="-406.5" y="764.5"/>
         </scene>
-        <!--Success Log View Controller-->
-        <scene sceneID="fUJ-me-dq6">
+        <!--Navigation Controller-->
+        <scene sceneID="hIS-Hs-Mmm">
             <objects>
-                <viewController storyboardIdentifier="Passed" id="LVF-QB-np4" customClass="SuccessLogViewController" customModule="InstagramParse" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNavigationController" id="mrH-r2-wbY" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lOd-Uy-eoR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="GOs-wq-Bn3" kind="relationship" relationship="rootViewController" id="8m8-wu-Iaz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QEQ-io-hWD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.5" y="764.5"/>
+        </scene>
+        <!--Account View Controller-->
+        <scene sceneID="jLh-pK-dfR">
+            <objects>
+                <viewController id="KWK-xw-i7D" customClass="AccountViewController" customModule="InstagramParse" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="h0D-uk-UqT"/>
-                        <viewControllerLayoutGuide type="bottom" id="eID-b4-wHE"/>
+                        <viewControllerLayoutGuide type="top" id="NeG-Ds-oYa"/>
+                        <viewControllerLayoutGuide type="bottom" id="j45-q9-03P"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="UUv-Z2-RFD">
+                    <view key="view" contentMode="scaleToFill" id="lIL-px-PIh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RxI-Z3-gce">
+                                <rect key="frame" x="20" y="165" width="335" height="57"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="onLogout:" destination="KWK-xw-i7D" eventType="touchUpInside" id="0ci-sN-dgq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8C1-Bb-7RK"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="push" identifier="accountToLoginSegue" id="52u-9Y-srF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yDx-RS-Mdb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="201.5" y="1592.5"/>
+        </scene>
+        <!--Home View-->
+        <scene sceneID="AWX-fe-krq">
+            <objects>
+                <tableViewController storyboardIdentifier="PassToTable" id="GOs-wq-Bn3" customClass="HomeTableViewController" customModule="InstagramParse" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="381" sectionHeaderHeight="28" sectionFooterHeight="28" id="eIN-Np-j4l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DisplayCell" rowHeight="381" id="HGK-cy-MoA" customClass="DisplayDataTableViewCell" customModule="InstagramParse" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="381"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HGK-cy-MoA" id="UEh-Ms-IBW">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="380"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="isL-vH-e2y">
+                                            <rect key="frame" x="8" y="8" width="359" height="228"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3z-HR-j9T">
+                                            <rect key="frame" x="8" y="244" width="359" height="128"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="captionLabel" destination="S3z-HR-j9T" id="OHr-RV-hDz"/>
+                                    <outlet property="photoImageView" destination="isL-vH-e2y" id="ObY-Ef-ORI"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GOs-wq-Bn3" id="Pkk-rh-WOv"/>
+                            <outlet property="delegate" destination="GOs-wq-Bn3" id="ACS-i1-6Nd"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Home View" id="vYD-S5-b7T">
+                        <barButtonItem key="leftBarButtonItem" title="Account" id="xXQ-6m-v0T">
+                            <connections>
+                                <segue destination="KWK-xw-i7D" kind="push" id="zL7-UQ-y2Q"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Capture" id="Kzp-xY-TSf">
+                            <connections>
+                                <segue destination="2ks-SH-lmX" kind="push" id="qQA-TR-EAQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HgU-ou-qOz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uQp-OX-0Uh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="466.5" y="770.5"/>
+            <point key="canvasLocation" x="533.5" y="764.5"/>
+        </scene>
+        <!--Post-->
+        <scene sceneID="Tde-UO-fDq">
+            <objects>
+                <viewController id="2ks-SH-lmX" customClass="CaptureViewController" customModule="InstagramParse" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xlD-bR-RZY"/>
+                        <viewControllerLayoutGuide type="bottom" id="mVd-o9-UKN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a6f-RO-yTH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iq2-SB-TcD">
+                                <rect key="frame" x="0.0" y="64" width="375" height="275"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djG-L2-mIG">
+                                <rect key="frame" x="20" y="80" width="335" height="251"/>
+                                <state key="normal" title="Tap to Add picture"/>
+                                <connections>
+                                    <action selector="onImageButton:" destination="2ks-SH-lmX" eventType="touchUpInside" id="Pmi-zL-l5Q"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MZc-D7-dUt">
+                                <rect key="frame" x="0.0" y="339" width="375" height="180"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkZ-4t-brc">
+                                <rect key="frame" x="0.0" y="513" width="375" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="onSubmit:" destination="2ks-SH-lmX" eventType="touchUpInside" id="yKB-j9-610"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Post" id="Sb0-P1-V4m"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="captionField" destination="MZc-D7-dUt" id="ZHh-96-c7J"/>
+                        <outlet property="capturePicture" destination="iq2-SB-TcD" id="BV1-GZ-PS3"/>
+                        <segue destination="GOs-wq-Bn3" kind="push" identifier="captureToHomeSegue" id="tTb-Sy-1v1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ypA-oA-fpx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1019.5" y="756.5"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="8m8-wu-Iaz"/>
+    </inferredMetricsTieBreakers>
 </document>

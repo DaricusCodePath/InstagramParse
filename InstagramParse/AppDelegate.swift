@@ -33,8 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if PFUser.currentUser() != nil {
             print("Current user: \(PFUser.currentUser()!.username)")
-            let viewController = storyboard.instantiateViewControllerWithIdentifier("Passed") 
-            window?.rootViewController = viewController
+            let viewController = storyboard.instantiateViewControllerWithIdentifier("HomeNavigationController") as? UINavigationController
+            window?.rootViewController = viewController 
         }
         return true
     }
